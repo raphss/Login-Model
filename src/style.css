@@ -1,0 +1,222 @@
+:root {
+    --backgroundGray: rgb(39, 39, 39);
+    --foregroundGray: rgba(0, 0, 0, 0.492);
+    --foregroundLightGray: rgba(65, 65, 65, 0.851);
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+    font-family: sans-serif;
+    font-size: 2vh;
+}
+
+body {
+    background-color: var(--backgroundGray);
+    margin: 0px;
+}
+
+button,
+a,
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--foregroundGray);
+    height: 7.5vh;
+    overflow: hidden;
+}
+
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar-hlinks {
+    font-size: 2vh;
+    padding: 4vh;
+    text-decoration: none;
+}
+
+.navbar-hlinks:hover {
+    background-color: var(--foregroundLightGray);
+}
+
+.list-items {
+    float: left;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: var(--foregroundGray);
+    width: 25vh;
+    text-align: center;
+    padding: 0vh;
+    z-index: 2;
+}
+
+.register-submenu {
+    margin: -1.5vh -4.5vh -1.5vh -4.5vh;
+}
+
+.about-submenu {
+    margin: -1.5vh 0vh -1.5vh -11.8vh;
+}
+
+.register-submenu li,
+.about-submenu li {
+    list-style: none;
+}
+
+.register-submenu a,
+.about-submenu a {
+    text-decoration: none;
+    font-size: 1.7vh;
+    padding: 2vh;
+    display: block;
+}
+
+.register-submenu li a:hover,
+.about-submenu li a:hover {
+    background-color: var(--foregroundLightGray);
+}
+
+
+.list-items:hover .register-submenu,
+.list-items:hover .about-submenu {
+    display: block;
+}
+
+.divContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--foregroundGray);
+    margin: 12vh 35vw 12vh 35vw;
+    padding: 7vh;
+    border-radius: 2vh;
+    height: 70vh;
+    min-width: 40vh;
+    max-height: 58vh;
+    z-index: 1;
+}
+
+.divContent label,
+input {
+    margin: 1vh;
+    font-size: 2.3vh;
+}
+
+.divContent input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--foregroundLightGray);
+    min-width: 40vh;
+    min-height: 3vh;
+    color: whitesmoke;
+    border: 0.2vh solid black;
+    border-radius: 0.4vh;
+    padding: 1vh;
+}
+
+
+.divContent input.btn {
+    min-width: 20vh;
+    min-height: 6.5vh;
+    font-size: 3vh;
+    margin: 3vh auto;
+}
+
+.divContent input.btn:hover {
+    filter: brightness(1.3);
+}
+
+.divContent a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: center;
+    margin: 4vh;
+}
+
+p {
+    max-width: 100%;
+    text-align: justify;
+    margin: 2vh 0vh;
+}
+
+.footer {
+    font-size: 1.7vh;
+    bottom: 0%;
+    position: fixed;
+    align-self: center;
+    z-index: 0;
+}
+
+@media only screen and (max-width: 480px) {
+    .divContent {
+        margin: 10vh 5vw 10vh 5vw;
+        padding: 8vh 0vh;
+    }
+
+    .divContent label,
+    input {
+        margin: 1vh;
+        font-size: 2.3vh;
+    }
+
+    .divContent input {
+        min-width: 32vh;
+        min-height: 2vh;
+        padding: 1vh;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar-hlinks {
+        padding: 2.5vh 2vh 2.5vh 2vh;
+    }
+
+    .navbar ul {
+        margin: 0vh;
+        padding: 2vh 0vh 2vh 0vh;
+    }
+
+    .submenu {
+        width: 16vh;
+    }
+
+    .register-submenu a,
+    .about-submenu a {
+        padding: 1vh;
+    }
+
+    p {
+        margin: 2.4vh;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 600px) {}
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {}
+
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {}
