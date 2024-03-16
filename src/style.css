@@ -1,6 +1,6 @@
 :root {
     --backgroundGray: rgb(39, 39, 39);
-    --foregroundGray: rgba(0, 0, 0, 0.492);
+    --foregroundGray: rgb(20, 20, 20);
     --foregroundLightGray: rgba(65, 65, 65, 0.851);
 }
 
@@ -168,8 +168,9 @@ p {
 
 @media only screen and (max-width: 480px) {
     .divContent {
-        margin: 10vh 5vw 10vh 5vw;
-        padding: 8vh 0vh;
+        margin: 8vh 5vw 8vh 5vw;
+        padding: 9vh 0vh;
+        max-height: 55vh;
     }
 
     .divContent label,
