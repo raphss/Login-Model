@@ -67,7 +67,7 @@ a,
 }
 
 .register-submenu {
-    margin: -1.5vh -4.5vh -1.5vh -4.5vh;
+    margin: -1.5vh -4.5vh;
 }
 
 .about-submenu {
@@ -103,11 +103,10 @@ a,
     justify-content: center;
     align-items: center;
     background-color: var(--foregroundGray);
-    margin: 12vh 35vw 12vh 35vw;
+    margin: 10vh 35vw;
     padding: 7vh;
     border-radius: 2vh;
     height: 70vh;
-    min-width: 40vh;
     max-height: 58vh;
     z-index: 1;
 }
@@ -168,21 +167,14 @@ p {
 
 @media only screen and (max-width: 480px) {
     .divContent {
-        margin: 3vh 5vw 5vh 5vw;
-        padding: 9vh 0vh;
-        max-height: 53vh;
-    }
-
-    .divContent label,
-    input {
-        margin: 1vh;
-        font-size: 2.3vh;
+        margin: 6vh 5vw 8vh 5vw;
+        padding: 8vh 0vh;
+        max-height: 58vh;
     }
 
     .divContent input {
         min-width: 32vh;
         min-height: 2vh;
-        padding: 1vh;
     }
 
     .navbar {
@@ -192,12 +184,12 @@ p {
     }
 
     .navbar-hlinks {
-        padding: 2.5vh 2vh 2.5vh 2vh;
+        padding: 2.5vh 2vh;
     }
 
     .navbar ul {
         margin: 0vh;
-        padding: 2vh 0vh 2vh 0vh;
+        padding: 2vh 0vh;
     }
 
     .submenu {
@@ -214,14 +206,42 @@ p {
     }
 
     .footer {
-        font-size: 1.4vh;
+        font-size: 1.2vh;
     }
 }
 
-@media only screen and (min-width: 481px) and (max-width: 600px) {}
+@media only screen and (min-width: 481px) and (max-width: 600px) {
+    .divContent {
+        margin: 10vh 15vw 12vh 15vw;
+    }
 
-@media only screen and (min-width: 601px) and (max-width: 768px) {}
+    .divContent input {
+        min-width: 33vh;
+    }
+}
 
-@media only screen and (min-width: 769px) and (max-width: 1024px) {}
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .divContent {
+        margin: 10vh 20vw 12vh 20vw;
+    }
 
-@media only screen and (min-width: 1025px) and (max-width: 1440px) {}
+    .divContent input {
+        min-width: 35vh;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .divContent {
+        margin: 10vh 25vw;
+    }
+
+    .divContent input {
+        min-width: 38vh;
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+    .divContent {
+        margin: 10vh 30vw;
+    }
+}
