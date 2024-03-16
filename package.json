@@ -9,7 +9,7 @@
     "build": "webpack --config webpack.prod.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "gh-pages": "git subtree push --prefix dist origin gh-pages"
+    "git-pages": "git subtree push --prefix dist origin git-pages"
   },
   "keywords": [],
   "author": "",
