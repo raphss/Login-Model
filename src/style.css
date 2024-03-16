@@ -168,7 +168,7 @@ p {
 
 @media only screen and (max-width: 480px) {
     .divContent {
-        margin: 3vh 5vw 5vh 5vw;
+        margin: 5vh 5vw 5vh 5vw;
         padding: 9vh 0vh;
         max-height: 53vh;
     }
@@ -211,6 +211,11 @@ p {
 
     p {
         margin: 2.4vh;
+    }
+
+    .footer {
+        position: absolute;
+        padding: 1vh;
     }
 }
 
