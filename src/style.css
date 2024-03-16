@@ -168,7 +168,7 @@ p {
 
 @media only screen and (max-width: 480px) {
     .divContent {
-        margin: 3.5vh 5vw 5vh 5vw;
+        margin: 4vh 5vw 5vh 5vw;
         padding: 9vh 0vh;
         max-height: 53vh;
     }
