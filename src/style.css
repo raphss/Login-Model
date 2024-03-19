@@ -8,8 +8,10 @@ body,
 html {
     height: 100%;
     margin: 0;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -ms-flex-direction: column;
+        flex-direction: column;
     color: whitesmoke;
     font-family: sans-serif;
     font-size: 2vh;
@@ -23,16 +25,22 @@ body {
 button,
 a,
 .btn {
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
     cursor: pointer;
 }
 
 .navbar {
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+    -ms-flex-align: center;
+        align-items: center;
     background-color: var(--foregroundGray);
     height: 7.5vh;
     overflow: hidden;
@@ -99,9 +107,12 @@ a,
 }
 
 .divContent {
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
     background-color: var(--foregroundGray);
     margin: 10vh 35vw;
     padding: 7vh;
@@ -118,9 +129,12 @@ input {
 }
 
 .divContent input {
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
     background-color: var(--foregroundLightGray);
     min-width: 40vh;
     min-height: 3vh;
@@ -161,7 +175,8 @@ p {
     font-size: 1.7vh;
     bottom: 0%;
     position: fixed;
-    align-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
     z-index: 0;
 }
 
@@ -178,9 +193,12 @@ p {
     }
 
     .navbar {
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+        -ms-flex-align: center;
+            align-items: center;
     }
 
     .navbar-hlinks {
