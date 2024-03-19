@@ -10,7 +10,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open --config webpack.dev.js",
-    "build": "npm run babel && npm run build-css && webpack --config webpack.prod.js",
+    "build": "npm run babel && webpack --config webpack.prod.js",
     "babel": "babel ./src/index.js --out-file ./src/babel.js",
     "build-css": "postcss src/style.css -o src/style.css",
     "lint": "eslint .",
