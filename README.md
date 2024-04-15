@@ -8,7 +8,7 @@
 
 ## About
 
-A Login Model/Template made in HTML, CSS and JavaScript.
+A Login Model/Template made with HTML, CSS and JavaScript.
 
 ## How to Contribute
 
