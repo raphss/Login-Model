@@ -1,5 +1,5 @@
 import newAccount from './newAccount.js';
-import manageAccount from './manageAccount.js';
+import { loginAcess, sendResetPasswordEmail } from './data.js';
 
 function createLogin() {
   const loginDiv = document.createElement('div');
@@ -17,6 +17,7 @@ function createLogin() {
   emailInput.type = 'email';
   emailInput.placeholder = 'email address';
   emailInput.required = true;
+  emailInput.id = 'email';
 
   const passwordLabel = document.createElement('label');
   passwordLabel.setAttribute('for', 'password');
@@ -26,11 +27,12 @@ function createLogin() {
   passwordInput.type = 'password';
   passwordInput.minLength = 8;
   passwordInput.required = true;
+  passwordInput.id = 'password';
 
   const recoverPassword = document.createElement('a');
   recoverPassword.textContent = 'Forgot your password?';
   recoverPassword.addEventListener('click', () => {
-    manageAccount();
+    sendResetPasswordEmail();
   });
 
   const registerLink = document.createElement('a');
@@ -43,6 +45,16 @@ function createLogin() {
   loginBtn.classList.add('login-btn', 'btn');
   loginBtn.value = 'Login';
   loginBtn.type = 'submit';
+  loginBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    loginAcess()
+      .then(() => {
+        console.log('Starting app...');
+      })
+      .catch((error) => {
+        console.error('Error during registration: ', error);
+      });
+  });
 
   form.appendChild(emailLabel);
   form.appendChild(document.createElement('br'));

@@ -1,7 +1,6 @@
 import './style.css';
 import login from './login.js';
 import newAccount from './newAccount.js';
-import manageAccount from './manageAccount.js';
 import deleteAccount from './deleteAccount.js';
 import aboutUsInfo from './aboutUsInfo.js';
 import ourProductsInfo from './ourProductsInfo.js';
@@ -38,14 +37,6 @@ function navbar() {
   });
   createAnAccount.appendChild(newAccountLink);
 
-  const editAccount = document.createElement('li');
-  const editAccountLink = document.createElement('a');
-  editAccountLink.textContent = 'Edit Account';
-  editAccountLink.addEventListener('click', () => {
-    manageAccount();
-  });
-  editAccount.appendChild(editAccountLink);
-
   const deleteAccountNav = document.createElement('li');
   const deleteAccountLink = document.createElement('a');
   deleteAccountLink.textContent = 'Delete Account';
@@ -55,7 +46,6 @@ function navbar() {
   deleteAccountNav.appendChild(deleteAccountLink);
 
   registerSubmenu.appendChild(createAnAccount);
-  registerSubmenu.appendChild(editAccount);
   registerSubmenu.appendChild(deleteAccountNav);
 
   const aboutItem = document.createElement('li');

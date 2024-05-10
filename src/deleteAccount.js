@@ -1,4 +1,5 @@
 import login from './login.js';
+import { removeUser } from './data.js';
 
 function createDelete() {
   const deleteDiv = document.createElement('div');
@@ -15,6 +16,7 @@ function createDelete() {
   const emailInput = document.createElement('input');
   emailInput.type = 'email';
   emailInput.required = true;
+  emailInput.id = 'email';
 
   const passwordLabel = document.createElement('label');
   passwordLabel.setAttribute('for', 'password');
@@ -24,6 +26,7 @@ function createDelete() {
   passwordInput.type = 'password';
   passwordInput.minLength = 8;
   passwordInput.required = true;
+  passwordInput.id = 'password';
 
   const confirmPasswordLabel = document.createElement('label');
   confirmPasswordLabel.setAttribute('for', 'password');
@@ -33,6 +36,7 @@ function createDelete() {
   confirmPasswordInput.type = 'password';
   confirmPasswordInput.minLength = 8;
   confirmPasswordInput.required = true;
+  confirmPasswordInput.id = 'check-password';
 
   const backToLogin = document.createElement('a');
   backToLogin.textContent = 'Back to Login';
@@ -44,6 +48,17 @@ function createDelete() {
   deleteBtn.classList.add('delete-btn', 'btn');
   deleteBtn.value = 'Delete';
   deleteBtn.type = 'submit';
+  deleteBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    removeUser()
+      .then(() => {
+        console.log('Deleted Account');
+        login();
+      })
+      .catch((error) => {
+        console.error('Error during deletion: ', error);
+      });
+  });
 
   form.appendChild(emailLabel);
   form.appendChild(document.createElement('br'));
